@@ -1,3 +1,17 @@
+@mixin random-bgr() {
+  outline: 1px solid rgb(random(255), random(255), random(255));
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,6 +28,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
+#root {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  @include random-bgr();
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,8 +48,8 @@ a:hover {
 }
 
 body {
+  height: 100%;
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;

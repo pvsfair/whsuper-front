@@ -1,0 +1,26 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 100%;
+
+  .header {
+    background-color: indigo;
+    text-align: center;
+  }
+  .menu {
+    flex: 1;
+    overflow: auto;
+    padding-top: 1rem;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
